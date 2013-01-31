@@ -3,6 +3,7 @@
 	border: 2px solid #ddd;
 	width: 100%;
 	height: 100%;
+	padding-top: 30px;
 	margin: 0;
 	@include box-sizing (border-box);
 }
@@ -46,6 +47,8 @@ body .redactor_air {
 	font-size: 15px !important;
 	line-height: 1.45em !important;
 	white-space: normal;
+	height: 100%;
+	@include box-sizing (border-box);
 }
 .redactor_editor a {
 	color: #15c !important;
@@ -210,7 +213,9 @@ body .redactor_air {
 */
 .redactor_toolbar {
 	font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif !important;
-	position: relative;
+	position: absolute;
+	@include box-sizing (border-box);
+	width: 100%;
 	left: 0;
 	top: 0;
 	margin: 0 !important;
@@ -230,6 +235,7 @@ body .redactor_air {
 	overflow: hidden !important;
 	height: 32px !important;
 	border-bottom: 1px solid #bbb;
+	z-index: 1;
 }
 body .redactor_air .redactor_toolbar {
 	padding-right: 2px !important;
