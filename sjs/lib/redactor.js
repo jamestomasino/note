@@ -528,8 +528,7 @@ var RLANG = {
 				{
 					exec: 'inserthorizontalrule',
 					title: RLANG.horizontalrule
-				}
-				,
+				},
 				fork:
 				{
 					exec: 'fork',
@@ -1210,7 +1209,7 @@ var RLANG = {
 				// CUSTOM FORK COMMAND
 				if (cmd === 'fork')
 				{
-					window.open('https://github.com/jamestomasino/note', '_blank');
+					window.open(forkURL, '_blank');
 				}
 
 				this.syncCode();

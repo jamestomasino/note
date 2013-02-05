@@ -1,3 +1,4 @@
+//= require variables
 //= require lib/jquery-1.8.2
 //= require lib/redactor
 //= require lib/store
