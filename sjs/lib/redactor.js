@@ -816,10 +816,6 @@ var RLANG = {
 					{
 						this.shortcuts(e, 'subscript'); // Ctrl + h
 					}
-					else if (key === 70)
-					{
-						this.shortcuts(e, 'fork'); // Ctrl + f
-					}
 				}
 
 				// clear undo buffer
