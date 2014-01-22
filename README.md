@@ -13,8 +13,19 @@ An ultra-quick, ultra-simple scratchpad.
 
 ## COMMIT LOG ##
 
+####2014-01-22####
+
+ * __updated readme__ (`James Tomasino`)
+ * __commenting out fork symbol__ (`James Tomasino`)
+ * __cleaning up css__ (`James Tomasino`)
+ * __tinymce added instead of redactorjs__ (`James Tomasino`)
+ * __adding tests folder__ (`James Tomasino`)
+ * __updating paths and adding new boilerplate__ (`James Tomasino`)
+ * __removing legacy boilerplate__ (`James Tomasino`)
+
 ####2013-02-06####
 
+ * upping version number (`James Tomasino`)
  * style fixes (`James Tomasino`)
  * added fork icon for retina display (`Eric Emmons`)
  * styled .redactor_box textarea to have width 100% and padding 10px (`Eric Emmons`)
