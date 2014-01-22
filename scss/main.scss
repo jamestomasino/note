@@ -1,18 +1,7 @@
 // Compass definitions
 @import "compass";
 @import "compass/css3";
-@import "compass/typography/vertical_rhythm";
-
-// Plugins
-@import "sassy-buttons";
-
-// Project
-@import "mixins";
 @import "lib/lib";
-@import "variables";
-@import "layout/layout";
-@import "type/type";
-
 
 .wrapper {
 	margin: 0;

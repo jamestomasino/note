@@ -1,0 +1,9 @@
+#!/bin/bash
+LOCAL_HOOK_DIR=$(git rev-parse --show-toplevel)/hooks
+
+if [ -x $0.local ]; then
+    $0.local "$@" || exit $?
+fi
+if [ -x $LOCAL_HOOK_DIR/$(basename $0) ]; then
+    $LOCAL_HOOK_DIR/$(basename $0) "$@" || exit $?
+fi

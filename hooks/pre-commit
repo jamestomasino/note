@@ -1,0 +1,25 @@
+#!/bin/bash
+LOCAL_DIR=$(git rev-parse --show-toplevel)
+cd $LOCAL_DIR
+
+# Require good linting to commit
+# exit if task failed
+if grunt lint; then
+
+	# Create README.md of the commit messages as a daily changelog
+	README="$LOCAL_DIR/README.md"
+	# Clear the contents from CHANGELOG to the end of file and prepare for appending
+	sed -i "" -e '/##\ COMMIT\ LOG\ ##/,$ d' $README
+	# Add a daily breakdown of commits to the project as a changelog to the README
+	echo "## COMMIT LOG ##" >> $README
+	git log --no-merges --format="%cd" --date=short | sort -u -r | while read DATE ; do
+		echo >> $README
+		echo -e "####$DATE####" >> $README
+		echo >> $README
+		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 00:00:00" --until="$DATE 09:00:00" >> $README
+		GIT_PAGER=cat git log --no-merges --format=" * __%s__ (\`%an\`)" --since="$DATE 09:00:01" --until="$DATE 17:30:00" >> $README
+		GIT_PAGER=cat git log --no-merges --format=" * %s (\`%an\`)" --since="$DATE 17:30:01" --until="$DATE 24:00:00" >> $README
+	done
+	git add $README
+
+fi
