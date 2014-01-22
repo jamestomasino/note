@@ -15,6 +15,7 @@ An ultra-quick, ultra-simple scratchpad.
 
 ####2014-01-22####
 
+ * __updated readme__ (`James Tomasino`)
  * __commenting out fork symbol__ (`James Tomasino`)
  * __cleaning up css__ (`James Tomasino`)
  * __tinymce added instead of redactorjs__ (`James Tomasino`)
