@@ -1,19 +1,21 @@
 Note
 ===
 
-v0.1.3
+v0.2.0
 
 An ultra-quick, ultra-simple scratchpad. 
 
 - Stores your content in local storage (via [store.js](https://github.com/marcuswestin/store.js/)) so your information is just yours.
-- Rich text ([jQuery Redactor](http://imperavi.com/redactor/))
-- Built using [Sass Boilerplate](https://github.com/jamestomasino/sass-boilerplate)
+- Rich text using [TinyMCE](http://www.tinymce.com/)
+- Built using [Grunt Boilerplate](https://github.com/jamestomasino/grunt-boilerplate)
 
 [Try it out.](http://jamestomasino.github.com/note/)
+
 ## COMMIT LOG ##
 
 ####2014-01-22####
 
+ * __commenting out fork symbol__ (`James Tomasino`)
  * __cleaning up css__ (`James Tomasino`)
  * __tinymce added instead of redactorjs__ (`James Tomasino`)
  * __adding tests folder__ (`James Tomasino`)
