@@ -14,6 +14,7 @@ An ultra-quick, ultra-simple scratchpad.
 
 ####2014-01-22####
 
+ * __cleaning up css__ (`James Tomasino`)
  * __tinymce added instead of redactorjs__ (`James Tomasino`)
  * __adding tests folder__ (`James Tomasino`)
  * __updating paths and adding new boilerplate__ (`James Tomasino`)
