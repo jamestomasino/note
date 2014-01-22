@@ -15,6 +15,8 @@ An ultra-quick, ultra-simple scratchpad.
 
 ####2014-01-22####
 
+ * __hiding extra ui elements and cleaning up fullscreen bug__ (`James Tomasino`)
+ * __added js and css back in for ghpages__ (`James Tomasino`)
  * __updated readme__ (`James Tomasino`)
  * __commenting out fork symbol__ (`James Tomasino`)
  * __cleaning up css__ (`James Tomasino`)
