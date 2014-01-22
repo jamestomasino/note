@@ -1,32 +1,33 @@
+var tinyMCE;
+
 $(document).ready( function(){
-
-	$('#redactor_content').redactor({
-        focus: true,
-        buttonsAdd: ['|', 'fork'],
-        buttonsCustom: {
-            fork: {
-                title: 'Fork Note on GitHub',
-                callback: function() {
-					window.open( 'https://github.com/jamestomasino/note', '_blank' );
-                }
-            }
-        }
-    });
-
-	$('#redactor_content').redactor({
-		focus: true,
-		keyupCallback: saveData,
-		execCommandCallback: saveData
+	tinyMCE.baseURL = "assets/";
+	tinymce.init({
+		selector: "textarea#note_content",
+		plugins: "fullscreen",
+		init_instance_callback : "initInstance",
+		setup : function(ed) {
+			ed.on('change', function(e) {
+				var html = ed.getContent();
+				store.set ( 'localnote', html );
+			});
+		}
 	});
-
-
-	var html = store.get( 'localnote' );
-	if (html) $('#redactor_content').setCode(html);
 
 	window.onbeforeunload = function (evt) { saveData(); };
 });
 
+function initInstance(inst) {
+    if(inst.editorId != 'mce_fullscreen') inst.execCommand('mceFullScreen');
+
+	var html = store.get( 'localnote' );
+	if (html) inst.setContent(html);
+
+}
+
 function saveData () {
-	var html = $('#redactor_content').getCode();
-	store.set ( 'localnote', html );
+	var html = tinyMCE.get('note_content').getContent();
+	if (html) {
+		store.set ( 'localnote', html );
+	}
 }
