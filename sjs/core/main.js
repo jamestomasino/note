@@ -5,6 +5,8 @@ $(document).ready( function(){
 	tinymce.init({
 		selector: "textarea#note_content",
 		plugins: "fullscreen",
+		menubar: false,
+		statusbar: false,
 		init_instance_callback : "initInstance",
 		setup : function(ed) {
 			ed.on('change', function(e) {
@@ -20,6 +22,7 @@ $(document).ready( function(){
 function initInstance(inst) {
     if(inst.editorId != 'mce_fullscreen') inst.execCommand('mceFullScreen');
 
+	$(window).trigger('resize'); // Fix display bug in tinymce fullscreen
 	var html = store.get( 'localnote' );
 	if (html) inst.setContent(html);
 
